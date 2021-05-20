@@ -1,3 +1,24 @@
 body {
-    background: blue;
+    background: lavender;
   } 
+
+h1 {
+  text-align: center;
+}
+
+div.container {
+  text-align: center;
+  border: 2px solid black;
+}
+
+div.image {
+  text-align: center;
+  /* border: 2px solid black; */
+}
+
+/* h2#header2{
+  width: 300px; */
+  /* border: 2px solid red; */
+  /* text-align: center; */
+  /* color: red; */
+/* } */
