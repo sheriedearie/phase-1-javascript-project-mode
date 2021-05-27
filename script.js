@@ -6,27 +6,49 @@
 // Your app needs to incorporate at least 3 separate event listeners (DOMContentLoaded, click, change, submit, etc).
 
 // Some interactivity is required. This could be as simple as adding a "like" button or adding comments. These interactions do not need to persist after reloading the page.
-// const h2 = document.createElement('h2');
-// h2.textContent = "This content added by JavaScript"; 
-// document.querySelector('body').appendChild(h2); 
+
 document.addEventListener('DOMContentLoaded', () => {
-	
+
 })
 
-const likeButton = document.getElementById("like-button")
 
-// likeButton.addEventListener("click", () => {
+const likeButton = document.getElementById("likeBtn")
+likeBtn.addEventListener("click", function(){
 	
-// })
+// when like button is pressed say you liked this page
+})
+
 const button = document.getElementById("submitBtn")
 submitBtn.addEventListener("click", function (e){
-e.preventDefault()
+	fetchImages()
+})
+
+function renderImages (image) {
+	const img = document.createElement("img");
+	img.src = image.url
+	document.body.appendChild(img)
+}
+
+document.querySelector("body > img")
 
 const imgUrl = "https://thatcopy.pw/catapi/rest/"
 
+const fetchImages = () => {
 fetch(imgUrl)
 	.then(res => res.json())
-	.then(console.log)
-// 	.then(data => data.message.forEach(url => renderImage(url)))
-})	
+	.then(data => renderImages(data))
 
+	// .then(data.message.forEach(url => renderImage(url)))
+	// can't do data.message because it is not an array... they are single objects
+	// .then(data => data.fetchImages.forEach(url => renderImage(url)))
+	// grabbing the container that the images are in and saying for each image render the image from the url
+	// create a renderImages function
+}
+
+const commentForm = document.getElementById("commentForm")
+// itentifies the comment button and tells js to grab it form HTML
+commentForm.addEventListener("submit", (e) => {
+	// taking the comment and saying when the submit is pressed do something
+e.preventDefault()
+// preventing the page from reloading and erasing the comment
+})

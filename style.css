@@ -11,7 +11,30 @@ div.container {
   border: 2px solid black;
 }
 
-div.image {
+div.leave-comment {
   text-align: center;
 }
 
+div.image{
+  text-align: center;
+}
+
+div.random-picture{
+  text-align: center;
+}
+
+img{
+  max-width: 300px;
+  max-height: 300px;
+}
+
+form#likeBtn {
+  text-align: center;
+}
+
+/*  give the image a class & name and give it a max width and max height */
+/* to do: make the cat pictures center - DONE!
+        : prevent default when adding a comment - DONE!
+        : make the like button work -DONE!
+        : when the like button is pressed say you have liked this page
+        : when a comment is left leave it on the page*/
