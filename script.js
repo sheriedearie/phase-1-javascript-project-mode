@@ -11,12 +11,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+const whiteHeart = '\u2661';
+const blackHeart = '\u2665';
+const heartBtn = document.querySelector('#button');
+heartBtn.addEventListener('click', toggle);
 
-const likeButton = document.getElementById("likeBtn")
-likeBtn.addEventListener("click", function(){
-	
-// when like button is pressed say you liked this page
-})
+function toggle() {
+  const like = heartBtn.innerHTML;
+  if(like===whiteHeart) {
+    heartBtn.innerHTML = blackHeart;
+  } else {
+    heartBtn.innerHTML = whiteHeart;
+  }
+}
+// const likeButton = document.getElementById("likeBtn")
+// likeBtn.addEventListener("click", function(){
+// 	console.log(likeButton)
+// // when like button is pressed say you liked this page
+// })
 
 const button = document.getElementById("submitBtn")
 submitBtn.addEventListener("click", function (e){
@@ -46,9 +58,15 @@ fetch(imgUrl)
 }
 
 const commentForm = document.getElementById("commentForm")
+const commentText = document.getElementById("commentText")
+const commentList = document.getElementById("commentList")
 // itentifies the comment button and tells js to grab it form HTML
 commentForm.addEventListener("submit", (e) => {
 	// taking the comment and saying when the submit is pressed do something
 e.preventDefault()
-// preventing the page from reloading and erasing the comment
+const li = document.createElement('li')
+console.log(li.value)
+li.innerHTML = commentText.value
+// // // preventing the page from reloading and erasing the comment
+commentList.append(li)
 })

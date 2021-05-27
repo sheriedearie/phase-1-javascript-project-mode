@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css"> 
         <title>Javascript project mode</title> 
   </head>
   <body>
@@ -20,13 +20,16 @@
     <div id="list" class="comments"> </div>  
     
     <div class="leave-comment">
-        <h3> Leave a comment about the cats!</h3>
+      <ul id="commentList">
       
+      </ul>
+        <h3> Leave a comment about the cats!</h3>
       <form id="commentForm" action="">
         <input type='text' name="comment" id="commentText" cols="30" rows="10">
-        <button id='submit'>submit </button> <button id="likeBtn"> ❤️ </button>
-        <span> you liked this page </span>
-        <!-- only span once it has been liked -->
+        <input type='submit'>
+</form>
+          <button id="button">♡</button> 
+      
       </form>
       <!-- container for the random cat pictures after the submit button -->
     </div>
